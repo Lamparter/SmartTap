@@ -11,7 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import dev.riverside.credit.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class Main : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
