@@ -43,4 +43,6 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="service_name">Smart Tap</string>
+    <string name="aid_group_description">Lorem Ipsum</string>
 </resources>
