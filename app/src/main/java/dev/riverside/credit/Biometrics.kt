@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import dev.riverside.credit.databinding.AuthBiometricBinding
 import java.util.concurrent.Executor
 
@@ -39,7 +41,8 @@ class Biometrics : Fragment() {
 
             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                 super.onAuthenticationSucceeded(result)
-                // TODO: Handle success
+                val navController = view?.findNavController()
+                navController?.navigate(R.id.action_FirstFragment_to_SecondFragment)
             }
 
             override fun onAuthenticationFailed() {

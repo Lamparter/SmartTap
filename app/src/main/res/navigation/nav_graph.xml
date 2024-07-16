@@ -19,10 +19,5 @@
         android:id="@+id/SecondFragment"
         android:name="dev.riverside.credit.Homepage"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/smart_tap">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+        tools:layout="@layout/smart_tap"/>
 </navigation>
