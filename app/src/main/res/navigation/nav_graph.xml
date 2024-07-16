@@ -3,31 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/authentication">
+    app:startDestination="@id/FirstFragment">
+
     <fragment
-        android:id="@+id/authentication"
-        android:name="dev.riverside.credit.Authentication"
-        android:label="Authentication" >
-        <action
-            android:id="@+id/action_authentication_to_biometrics"
-            app:destination="@id/biometrics" />
-    </fragment>
-    <fragment
-        android:id="@+id/biometrics"
+        android:id="@+id/FirstFragment"
         android:name="dev.riverside.credit.Biometrics"
-        android:label="auth_biometric"
-        tools:layout="@layout/auth_biometric" >
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/auth_biometric">
+
         <action
-            android:id="@+id/action_biometrics_to_homepage"
-            app:destination="@id/homepage" />
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
-        android:id="@+id/homepage"
+        android:id="@+id/SecondFragment"
         android:name="dev.riverside.credit.Homepage"
-        android:label="smart_tap"
-        tools:layout="@layout/smart_tap" />
-    <fragment
-        android:id="@+id/biometricAuthorisation"
-        android:name="dev.riverside.credit.Authentication.BiometricAuthorisation"
-        android:label="BiometricAuthorisation" />
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/smart_tap"/>
 </navigation>

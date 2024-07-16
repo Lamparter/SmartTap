@@ -45,5 +45,4 @@
     </string>
     <string name="service_name">Smart Tap</string>
     <string name="aid_group_description">Lorem Ipsum</string>
-    <string name="title_activity_authentication">Authentication</string>
 </resources>
