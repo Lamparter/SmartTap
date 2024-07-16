@@ -7,11 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import android.hardware.biometrics.BiometricManager.Authenticators
+import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import dev.riverside.credit.databinding.AuthBiometricBinding
 import java.util.concurrent.Executor
+import kotlin.system.exitProcess
 
 class Biometrics : Fragment() {
 
@@ -42,12 +45,13 @@ class Biometrics : Fragment() {
             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                 super.onAuthenticationSucceeded(result)
                 val navController = view?.findNavController()
-                navController?.navigate(R.id.action_FirstFragment_to_SecondFragment)
+                navController?.navigate(R.id.action_biometrics_to_homepage)
             }
 
             override fun onAuthenticationFailed() {
                 super.onAuthenticationFailed()
                 // TODO: Handle failure
+                exitProcess(77)
             }
         }
 
@@ -55,9 +59,10 @@ class Biometrics : Fragment() {
         val biometricPrompt = BiometricPrompt(this, executor, callback)
 
         val promptInfo = BiometricPrompt.PromptInfo.Builder()
-            .setTitle("Biometric Authentication")
-            .setSubtitle("Log in using your biometric credential")
-            .setNegativeButtonText("Cancel")
+            .setTitle("Verify that it's you")
+            .setDescription("For your security, you need to verify that it's you before using Smart Tap")
+            .setNegativeButtonText(" ")
+            .setConfirmationRequired(true)
             .build()
 
         // Start authentication

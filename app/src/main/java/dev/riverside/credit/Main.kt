@@ -9,8 +9,13 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import androidx.biometric.BiometricPrompt
 import androidx.compose.material3.NavigationBar
+import androidx.core.content.ContextCompat
 import dev.riverside.credit.databinding.ActivityMainBinding
+import java.util.concurrent.Executor
+import kotlin.system.exitProcess
 
 class Main : AppCompatActivity() {
 

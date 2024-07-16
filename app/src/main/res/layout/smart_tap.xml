@@ -9,20 +9,12 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="360dp"
-        android:layout_height="132dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="559dp"
+        android:layout_height="389dp"
+        android:layout_marginTop="68dp"
         android:src="@drawable/credit_foreground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="125dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
