@@ -42,7 +42,7 @@ class Biometrics : Fragment() {
             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                 super.onAuthenticationSucceeded(result)
                 val navController = view?.findNavController()
-                navController?.navigate(R.id.action_FirstFragment_to_SecondFragment)
+                navController?.navigate(R.id.action_biometrics_to_homepage)
             }
 
             override fun onAuthenticationFailed() {
