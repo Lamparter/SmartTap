@@ -15,11 +15,16 @@ import androidx.navigation.fragment.findNavController
 import dev.riverside.credit.databinding.AuthBiometricBinding
 import java.util.concurrent.Executor
 import kotlin.system.exitProcess
+import android.content.DialogInterface
+import androidx.appcompat.app.AlertDialog
+import android.app.Activity
 
 class Biometrics : Fragment() {
 
     private var _binding: AuthBiometricBinding? = null
     private val binding get() = _binding!!
+
+    private var biometricPrompt: BiometricPrompt? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,11 +40,18 @@ class Biometrics : Fragment() {
         // Get an instance of the main executor
         val executor: Executor = ContextCompat.getMainExecutor(requireContext())
 
+        val promptInfo = BiometricPrompt.PromptInfo.Builder()
+            .setTitle("Verify that it's you")
+            .setSubtitle("For your security, you need to verify that it's you before using Smart Tap")
+            .setNegativeButtonText(" ")
+            .setConfirmationRequired(true)
+            .build()
+
         // Create the callback
         val callback = object : BiometricPrompt.AuthenticationCallback() {
             override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
                 super.onAuthenticationError(errorCode, errString)
-                // TODO: Handle error
+                (activity as Activity).finish()
             }
 
             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
@@ -50,20 +62,11 @@ class Biometrics : Fragment() {
 
             override fun onAuthenticationFailed() {
                 super.onAuthenticationFailed()
-                // TODO: Handle failure
-                exitProcess(77)
+
             }
         }
-
         // Initialize BiometricPrompt instance
         val biometricPrompt = BiometricPrompt(this, executor, callback)
-
-        val promptInfo = BiometricPrompt.PromptInfo.Builder()
-            .setTitle("Verify that it's you")
-            .setDescription("For your security, you need to verify that it's you before using Smart Tap")
-            .setNegativeButtonText(" ")
-            .setConfirmationRequired(true)
-            .build()
 
         // Start authentication
         biometricPrompt.authenticate(promptInfo)
@@ -74,38 +77,3 @@ class Biometrics : Fragment() {
         _binding = null
     }
 }
-
-///**
-// * A simple [Fragment] subclass as the default destination in the navigation.
-// */
-//class Biometrics : Fragment() {
-//
-//    private var _binding: AuthBiometricBinding? = null
-//
-//    // This property is only valid between onCreateView and
-//    // onDestroyView.
-//    private val binding get() = _binding!!
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View {
-//
-//        _binding = AuthBiometricBinding.inflate(inflater, container, false)
-//        return binding.root
-//
-//    }
-//
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-////        binding.buttonFirst.setOnClickListener {
-////            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-////        }
-//    }
-//
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        _binding = null
-//    }
-//}
