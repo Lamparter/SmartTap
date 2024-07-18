@@ -1,21 +1,11 @@
 package dev.riverside.credit
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import androidx.biometric.BiometricPrompt
-import androidx.compose.material3.NavigationBar
-import androidx.core.content.ContextCompat
 import dev.riverside.credit.databinding.ActivityMainBinding
-import java.util.concurrent.Executor
-import kotlin.system.exitProcess
 
 class Main : AppCompatActivity() {
 
