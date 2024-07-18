@@ -5,17 +5,4 @@ xmlns:tools="http://schemas.android.com/tools"
 android:id="@+id/nestedScrollView"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".Biometrics">
-
-<ImageView
-    android:id="@+id/imageView5"
-    android:layout_width="559dp"
-    android:layout_height="389dp"
-    android:layout_marginTop="68dp"
-    android:src="@mipmap/credit"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:contentDescription="@string/app_name"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+tools:context=".Biometrics"/>

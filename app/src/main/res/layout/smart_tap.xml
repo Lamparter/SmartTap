@@ -9,11 +9,11 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="559dp"
-        android:layout_height="389dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="419dp"
+        android:layout_height="385dp"
         android:src="@drawable/credit_foreground"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

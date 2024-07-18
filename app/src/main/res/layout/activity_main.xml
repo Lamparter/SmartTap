@@ -10,13 +10,13 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="731dp"
+        android:layout_width="414dp"
+        android:layout_height="76dp"
         android:fitsSystemWindows="true"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-    </com.google.android.material.appbar.AppBarLayout>
+        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
+        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
+        app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"/>
 
     <include
         android:id="@+id/include"
@@ -26,10 +26,21 @@
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_width="419dp"
+        android:layout_height="77dp"
         android:layout_gravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="dev.riverside.credit.Homepage"
+        android:layout_width="413dp"
+        android:layout_height="843dp"
+        app:layout_constraintBottom_toTopOf="@+id/appBarLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
