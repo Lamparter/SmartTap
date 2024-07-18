@@ -6,17 +6,10 @@ import androidx.biometric.BiometricPrompt
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import android.hardware.biometrics.BiometricManager.Authenticators
-import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import dev.riverside.credit.databinding.AuthBiometricBinding
 import java.util.concurrent.Executor
-import kotlin.system.exitProcess
-import android.content.DialogInterface
-import androidx.appcompat.app.AlertDialog
 import android.app.Activity
 
 class Biometrics : Fragment() {
