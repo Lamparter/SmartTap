@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import dev.riverside.credit.databinding.AuthBiometricBinding
+import dev.riverside.credit.databinding.ActivityMainBinding
+import dev.riverside.credit.Main
 import java.util.concurrent.Executor
 import android.app.Activity
 
@@ -49,8 +51,7 @@ class Biometrics : Fragment() {
 
             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                 super.onAuthenticationSucceeded(result)
-                val navController = view.findNavController()
-                navController.navigate(R.id.action_biometrics_to_homepage)
+
             }
 
             override fun onAuthenticationFailed() {

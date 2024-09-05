@@ -35,9 +35,9 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="dev.riverside.credit.Homepage"
-        android:layout_width="413dp"
-        android:layout_height="843dp"
+        android:name="dev.riverside.credit.Logo"
+        android:layout_width="411dp"
+        android:layout_height="841dp"
         app:layout_constraintBottom_toTopOf="@+id/appBarLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

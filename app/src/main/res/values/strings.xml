@@ -4,4 +4,6 @@
 
     <string name="service_name">Smart Tap</string>
     <string name="aid_group_description">Lorem Ipsum</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

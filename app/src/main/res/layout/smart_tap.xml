@@ -5,10 +5,10 @@
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Homepage">
+    tools:context=".Logo">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/smartTapLogo"
         android:layout_width="419dp"
         android:layout_height="385dp"
         android:src="@drawable/credit_foreground"
