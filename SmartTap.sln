@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35209.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartTap", "SmartTap\SmartTap.csproj", "{8C3D8E3E-AB16-4D4F-833A-627CBABA1C9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartTap.Sdk", "SmartTap.Sdk\SmartTap.Sdk.csproj", "{ECE0A1A4-312C-489B-BB5C-566F5773BAEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{8C3D8E3E-AB16-4D4F-833A-627CBABA1C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C3D8E3E-AB16-4D4F-833A-627CBABA1C9C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C3D8E3E-AB16-4D4F-833A-627CBABA1C9C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{ECE0A1A4-312C-489B-BB5C-566F5773BAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECE0A1A4-312C-489B-BB5C-566F5773BAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECE0A1A4-312C-489B-BB5C-566F5773BAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECE0A1A4-312C-489B-BB5C-566F5773BAEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
