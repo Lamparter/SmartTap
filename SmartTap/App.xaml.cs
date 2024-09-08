@@ -1,6 +1,19 @@
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.UI.Xaml;
+using SmartTap.Sdk;
+using SmartTap.Services;
+using Uno.Extensions;
+using Uno.Extensions.Configuration;
+using Uno.Extensions.Hosting;
+using Uno.Extensions.Localization;
+using Uno.Extensions.Logging;
+using Uno.Extensions.Navigation;
+using Uno.Extensions.Serialization;
 using Uno.Resizetizer;
 
 namespace SmartTap;
+
 public partial class App : Application
 {
     /// <summary>
@@ -76,8 +89,11 @@ public partial class App : Application
                     .AddRefitClient<IApiClient>(context))
                 .ConfigureServices((context, services) =>
                 {
-                    // TODO: Register your services
-                    //services.AddSingleton<IMyService, MyService>();
+#if __ANDROID__
+                    services.AddSingleton<INfcEmulator, NfcEmulator>();
+#elif __IOS__
+                    services.AddSingleton<INfcEmulator, NfcEmulator>();
+#endif
                 })
                 .UseNavigation(RegisterRoutes)
             );
@@ -110,3 +126,4 @@ public partial class App : Application
         );
     }
 }
+

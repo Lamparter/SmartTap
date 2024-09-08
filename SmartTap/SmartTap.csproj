@@ -36,4 +36,7 @@
     </UnoFeatures>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SmartTap.Sdk\SmartTap.Sdk.csproj" />
+  </ItemGroup>
 </Project>
