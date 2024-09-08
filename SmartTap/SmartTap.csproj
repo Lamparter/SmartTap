@@ -35,7 +35,9 @@
       ThemeService;
     </UnoFeatures>
   </PropertyGroup>
-
+  <ItemGroup>
+    <None Remove="Assets\SmartTap-PayCard.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SmartTap.Sdk\SmartTap.Sdk.csproj" />
   </ItemGroup>
